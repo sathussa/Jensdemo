@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                git branch: 'main', credentialsId: '276857c0-5115-411e-bcea-6b9b44d7a82d', url: 'https://github.com/sathussa/jenkins.git'
+            }
+        }
+    }
+}
